@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Heroes</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body >
+    <div style="margin: 10px; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+        <div style="margin: 10px; display: flex; align-items: center; justify-content: center;">
+            <main class="table" id="herostable">
+                <section class="table__header">
+                    <h1 style="
+                        color: #ff4081;
+                        font-size: 36px;
+                        /* margin: 50px; */
+                        padding: 10px;"><span>Heroes</span></h1>
+                 
+                    <div class="input-group">
+                        <input type="text" id="search-input" placeholder="Search by name">
+                        <img src="images/search.png" alt="">
+                    </div>
+                    
+                </section>
+                <section>
+                    <div>
+                        <label style="padding: 20px;" for="itemsPerPage"><span>Items Per Page:</span></label>
+                        <select id="itemsPerPage" onchange="updatePagination()">
+                            <option value="10">10</option>
+                            <option value="20" selected>20</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                            <option value="all">All</option>
+                        </select>
+                        <button  class="awesome-button" onclick="handleButtonClick()">Apply Selection</button>
+                    </div>
+                </section>
+                <section class="table__body">
+                    <table id="data-table" border="1px">
+                        <thead>
+                            <tr>
+                                <th> icon <span ></span></th>
+                                <th> Name <span ></span></th>
+                                <th> Full Name <span ></span></th>
+                                <!-- <th col="6"> Powerstats <span ></span></th> -->
+                                <th>intelligence <span ></span></th>
+                                <th> strength <span ></span></th>
+                                <th> speed <span ></span></th>
+                                <th> durability <span ></span></th>
+                                <th> power <span ></span></th>
+                                <th> combat <span ></span></th>
+                                <th> Race <span ></span></th>
+                                <th> Gender <span ></span></th>
+                                <th> Height <span ></span></th>
+                                <th> Weight <span ></span></th>
+                                <th> Place Of Birth <span ></span></th>
+                                <th> Alignment  <span ></span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- heros details -->
+                        </tbody>
+                    </table>
+                </section>
+                
+            </main>
+            
+        </div>
+        <div id="pagination"></div>
+    </div>
+
+    <script src="sortable.js"></script>
+
+</body>
+
+</html>
